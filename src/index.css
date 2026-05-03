@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-primary: #aa3bff;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-300 font-sans antialiased selection:bg-primary/30;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-100 font-bold;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-slate-800/50 backdrop-blur-md border border-slate-700/50 rounded-2xl shadow-xl;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(170,59,255,0.3)] hover:-translate-y-1;
+  }
+}
